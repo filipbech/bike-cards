@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        #container {
+            width:690px;
+            margin: 0 auto;
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: space-between;
+        }
+        .card {
+            border:1px solid #eee;
+            margin-bottom:0px;
+            width:230px;
+            height:339px;
+            font-family: 'Roboto', sans-serif;
+            padding:10px;
+            box-sizing:border-box;
+            font-size:16px;
+            position:relative;
+        }
+        .card:nth-child(9n) {
+            margin-bottom:30px;
+        }
+        .name {
+            font-size:22px;
+            font-weight:bold;
+            height:80px;
+        }
+        .img {
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background-position:top center;
+            background-size: cover;
+            float: right;
+            border:1px solid #eee;
+            -webkit-print-color-adjust: exact;
+            position:relative;
+            margin-left:10px;
+            margin-bottom:10px;
+        }
+        .ranking {
+            position:absolute;
+            top:100%;
+            padding-top:5px;
+            width:50px;
+            text-align:center;
+        }
+        .stats {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .field {
+            flex: 1 0 45%;
+            position:relative;
+        }
+        .label {
+            font-size:11px;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .value {
+            text-align:center;
+            padding-top:15px;
+            padding-bottom:10px;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        .specialities {
+            display:flex;
+        }
+        .spec {
+            width:25%;
+            position:relative;
+        }
+        .spec .label {
+            font-size:9px;
+            text-align: center;
+            right:0;
+        }
+        .spec .value {
+            padding-top:10px;
+            font-size:18px;
+        }
+
+        .team {
+            position:absolute;
+            text-transform: uppercase;
+            font-size:20px;
+            font-weight:bold;
+            bottom:24px;
+            left:10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 210px;
+        }
+        .team-color {
+            position:absolute;
+            bottom:0;
+            height:18px;
+            left:0;
+            right:0;
+            -webkit-print-color-adjust: exact;
+        }
+        .team-color:before, .team-color:after {
+            content:'';
+            display:block;
+            height:6px;
+            position:absolute;
+            left:0;
+            right:0;
+            -webkit-print-color-adjust: exact;
+        }
+        .team-color:after {
+            bottom:0;
+        }
+
+        .Astana:before {
+            background-color:#099BA8;
+        }
+        .Astana {
+            background-color:#FECC03;
+        }
+        .Astana:after {
+            background-color:#099BA8;
+        }
+
+        .AG2R:before {
+            background-color:#00aed6;
+        }
+        .AG2R {
+            background-color:#fff;
+        }
+        .AG2R:after {
+            background-color:rgb(90, 51, 24);
+        }
+
+        .Bahrain:before {
+            background-color:#0c1e42
+        }
+        .Bahrain {
+            background-color:#ab8f55;
+        }
+        .Bahrain:after {
+            background-color:#e41e1b
+        }
+
+        .BMC:before {
+            background-color:red;
+        }
+        .BMC {
+            background-color:#fff;
+        }
+        .BMC:after {
+            background-color:#000;
+        }
+
+        .BORA:before {
+            background-color:#009c80;
+        }
+        .BORA {
+            background-color:#fff;
+        }
+        .BORA:after {
+            background-color:#000;
+        }
+
+        .Cofidis:before {
+            background-color:#d00234;
+        }
+        .Cofidis {
+            background-color:#fff;
+        }
+        .Cofidis:after {
+            background-color:#ffcb08;
+        }
+
+        .Direct:before {
+            background-color:#000;
+        }
+        .Direct {
+            background-color:#fff;
+        }
+        .Direct:after {
+            background-color:#fec300;
+        }
+
+        .FDJ:before {
+            background-color:#003f9a;
+        }
+        .FDJ {
+            background-color:#fff;
+        }
+        .FDJ:after {
+            background-color:#D8001C;
+        }    
+
+        .Lotto:before {
+            background-color:#e42312;
+        }
+        .Lotto {
+            background-color:#fff;
+        }
+        .Lotto:after {
+            background-color:#e42312;
+        }
+        
+        .Mitchelton-Scott:before {
+            background-color:#000;
+        }
+        .Mitchelton-Scott {
+            background-color:#e1ff32;
+        }
+        .Mitchelton-Scott:after {
+            background-color:#00265c;
+        }
+        
+        .Movistar:before {
+            background-color:#16a1cc;
+        }
+        .Movistar {
+            background-color:#fff;
+        }
+        .Movistar:after {
+            background-color:#000;
+        }
+
+        .CCC:before {
+            background-color:#ff5a00;
+        }
+        .CCC {
+            background-color:#000;
+        }
+        .CCC:after {
+            background-color:#ff5a00;
+        }
+                
+        .Quick:before {
+            background-color:#074a91;
+        }
+        .Quick {
+            background-color:#fff;
+        }
+        .Quick:after {
+            background-color:#074a91;
+        }
+
+
+        .Roompot:before {
+            background-color:#ec6727;
+        }
+        .Roompot {
+            background-color:#fff;
+        }
+        .Roompot:after {
+            background-color:#000;
+        }
+
+
+        .Vital:before {
+            background-color:#05ad96;
+        }
+        .Vital {
+            background-color:#fff;
+        }
+        .Vital:after {
+            background-color:#000;
+        }
+
+
+
+        .ColoQuick:before {
+            background-color:#000;
+        }
+        .ColoQuick {
+            background-color:#fff;
+        }
+        .ColoQuick:after {
+            background-color:#000;
+        }
+
+        .Dimension:before {
+            background-color:#69be28;
+        }
+        .Dimension {
+            background-color:#000;
+        }
+        .Dimension:after {
+            background-color:#fff;
+        }
+
+        .Education:before {
+            background-color:#fc47b3;
+        }
+        .Education {
+            background-color:#fff;
+        }
+        .Education:after {
+            background-color:#258f4d;
+        }
+
+        .Fortuneo:before {
+            background-color:#7EC656;
+        }
+        .Fortuneo {
+            background-color:#fff;
+        }
+        .Fortuneo:after {
+            background-color:#7EC656;
+        }
+
+        .Katusha:before {
+            background-color:#D50032;
+        }
+        .Katusha {
+            background-color:#fff;
+        }
+        .Katusha:after {
+            background-color:#76232F;
+        }
+
+        .Corendon:before {
+            background-color:#e30613;
+        }
+        .Corendon {
+            background-color:#fff;
+        }
+        .Corendon:after {
+            background-color:#e30613;
+        }
+
+        .Samsic:before {
+            background-color:#ED1C24;
+        }
+        .Samsic {
+            background-color:#fff;
+        }
+        .Samsic:after {
+            background-color:#000;
+        }
+
+        .Riwal:before {
+            background-color:#ff6a00;
+        }
+        .Riwal {
+            background-color:#fff;
+        }
+        .Riwal:after {
+            background-color:#000;
+        }
+
+        .BHS:before {
+            background-color:#128831;
+        }
+        .BHS {
+            background-color:#000;
+        }
+        .BHS:after {
+            background-color:#0b369e;
+        }
+
+
+        .Jumbo-Visma:before {
+            background-color:#ffd60e;
+        }
+        .Jumbo-Visma {
+            background-color:#000;
+        }
+        .Jumbo-Visma:after {
+            background-color:#ffd60e;
+        }
+        
+        .INEOS:before {
+            background-color:#8d1637;
+        }
+        .INEOS {
+            background-color:#fff;
+        }
+        .INEOS:after {
+            background-color:#000;
+        }
+
+        .Sunweb:before {
+            background-color:#ec1b2d;
+        }
+        .Sunweb {
+            background-color:#fff;
+        }
+        .Sunweb:after {
+            background-color:#ec1b2d;
+        }
+
+        .Trek:before {
+            background-color:#e13127;
+        }
+        .Trek {
+            background-color:#fff;
+        }
+        .Trek:after {
+            background-color:#292929;
+        }
+
+        .UAE-Team:before {
+            background-color:#d31718;
+        }
+        .UAE-Team {
+            background-color:#fff;
+        }
+        .UAE-Team:after {
+            background-color:#038e37;
+        }
+
+        .Wanty:before {
+            background-color:#E5FF56;
+        }
+        .Wanty {
+            background-color:#fff;
+        }
+        .Wanty:after {
+            background-color:#113473;
+        }
+
+        .Aqua:before {
+            background-color:#111038;
+        }
+        .Aqua {
+            background-color:#c5a246;
+        }
+        .Aqua:after {
+            background-color:#111038;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="code.js"></script>
+</body>
+</html>
