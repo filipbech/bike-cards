@@ -84,7 +84,7 @@ fetch(dataurl)
             container.innerHTML += html`
                 <div class="card">
                     <div class="img" style="background-image:url('${rider.img}')">
-                        <div class="ranking">${rider.ucirank}.</div>    
+                        <div class="ranking">${rider.ucirank ? rider.ucirank+'.' : '' }</div>    
                     </div>
                     <div class="name">
                         ${rider.name} ${rider.country}

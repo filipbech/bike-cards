@@ -4,6 +4,48 @@ const fs = require('fs');
 const jQuery = require('cheerio');
 
 const urls = [
+    'https://www.procyclingstats.com/rider/amalie-dideriksen',
+    'https://www.procyclingstats.com/rider.php?id=168160',
+    'https://www.procyclingstats.com/rider/annemiek-van-vleuten',
+    'https://www.procyclingstats.com/rider/amanda-spratt',
+    'https://www.procyclingstats.com/rider/anna-van-der-breggen',
+    'https://www.procyclingstats.com/rider/julie-leth',
+    'https://www.procyclingstats.com/rider.php?id=140856',
+    'https://www.procyclingstats.com/rider/kirsten-wild',
+    'https://www.procyclingstats.com/rider/lorena-wiebes',
+    'https://www.procyclingstats.com/rider/marta-bastianelli',
+    'https://www.procyclingstats.com/rider/amy-pieters',
+    'https://www.procyclingstats.com/rider/leah-kirchmann',
+    'https://www.procyclingstats.com/rider/ellen-van-dijk',
+
+    'https://www.procyclingstats.com/rider/tobias-foss',
+    'https://www.procyclingstats.com/rider/andreas-leknessund',
+    'https://www.procyclingstats.com/rider/markus-hoelgaard',
+    'https://www.procyclingstats.com/rider/jacob-hindsgaul-madsen',
+    'https://www.procyclingstats.com/rider/andreas-kron',
+    'https://www.procyclingstats.com/rider/mathias-norsgaard',
+    'https://www.procyclingstats.com/rider/emil-vinjebo',
+    'https://www.procyclingstats.com/rider/lucas-eriksson',
+    'https://www.procyclingstats.com/rider/andreas-stokbro',
+    'https://www.procyclingstats.com/rider/nicolai-brochner',
+    'https://www.procyclingstats.com/rider/rasmus-bogh-wallin',
+    'https://www.procyclingstats.com/rider/tobias-kongstad',
+    'https://www.procyclingstats.com/rider/frederik-rodenberg',
+    'https://www.procyclingstats.com/rider/johan-price-pejtersen',
+    'https://www.procyclingstats.com/rider.php?id=184409',
+    'https://www.procyclingstats.com/rider/david-de-la-cruz',
+    'https://www.procyclingstats.com/rider/dylan-teuns',
+    'https://www.procyclingstats.com/rider/jesus-herrada-lopez',
+    'https://www.procyclingstats.com/rider/jose-herrada',
+    'https://www.procyclingstats.com/rider/bryan-coquard',
+    'https://www.procyclingstats.com/rider/ivan-ramiro-sosa',
+    'https://www.procyclingstats.com/rider.php?id=184433',
+    'https://www.procyclingstats.com/rider/magnus-cort-nielsen',
+    'https://www.procyclingstats.com/rider/remco-evenepoel',
+    'https://www.procyclingstats.com/rider/victor-campenaerts',
+    'https://www.procyclingstats.com/rider/pello-bilbao',
+    'https://www.procyclingstats.com/rider/kenny-de-ketele',
+    'https://www.procyclingstats.com/rider/mikkel-bjerg',
     'https://www.procyclingstats.com/rider/mathieu-van-der-poel',
     'https://www.procyclingstats.com/rider/wout-van-aert',
     'https://www.procyclingstats.com/rider/richard-carapaz',
@@ -51,7 +93,6 @@ const urls = [
     'https://www.procyclingstats.com/rider/lilian-calmejane',
     'https://www.procyclingstats.com/rider/thibaut-pinot',
     'https://www.procyclingstats.com/rider.php?id=140818',
-    'https://www.procyclingstats.com/rider/lars-ytting-bak',
     'https://www.procyclingstats.com/rider.php?id=140786',
     'https://www.procyclingstats.com/rider/thomas-de-gendt',
     'https://www.procyclingstats.com/rider.php?id=133024',
@@ -73,15 +114,12 @@ const urls = [
     'https://www.procyclingstats.com/rider/pierre-rolland',
     'https://www.procyclingstats.com/rider/tao-geoghegan-hart',
     'https://www.procyclingstats.com/rider/jonas-gregaard',
-    'https://www.procyclingstats.com/rider/matti-breschel',
     'https://www.procyclingstats.com/rider/sep-vanmarcke',
     'https://www.procyclingstats.com/rider/warren-barguil',
-    'https://www.procyclingstats.com/rider/marcel-kittel',
     'https://www.procyclingstats.com/rider/ilnur-zakarin',
     'https://www.procyclingstats.com/rider/tony-martin',
     'https://www.procyclingstats.com/rider/mads-wurtz-schmidt',
     'https://www.procyclingstats.com/rider/dylan-groenewegen',
-    'https://www.procyclingstats.com/rider.php?id=140903',
     'https://www.procyclingstats.com/rider/steven-kruijswijk',
     'https://www.procyclingstats.com/rider/primoz-roglic',
     'https://www.procyclingstats.com/rider/christopher-froome',
@@ -95,7 +133,7 @@ const urls = [
     'https://www.procyclingstats.com/rider/john-degenkolb',
     'https://www.procyclingstats.com/rider/mads-pedersen',
     'https://www.procyclingstats.com/rider/alexander-kristoff',
-    'https://www.procyclingstats.com/rider/daniel-martin1',
+    'https://www.procyclingstats.com/rider/dan-martin',
     'https://www.procyclingstats.com/rider/fabio-aru',
     'https://www.procyclingstats.com/rider/guillaume-martin',
     'https://www.procyclingstats.com/rider/lasse-norman-hansen',
@@ -119,7 +157,6 @@ const urls = [
     'https://www.procyclingstats.com/rider/nils-politt',
     'https://www.procyclingstats.com/rider/rui-costa',
     'https://www.procyclingstats.com/rider/tadej-pogacar',
-    'https://www.procyclingstats.com/rider/bjorg-lambrecht',
     'https://www.procyclingstats.com/rider/danny-van-poppel',
     'https://www.procyclingstats.com/rider/george-bennett',
     'https://www.procyclingstats.com/rider/davide-formolo',
@@ -141,7 +178,7 @@ function camelize(str) {
     });
 }
 
-const parser = response => {
+const parser = (response, url) => {
     const content = jQuery(response);
 
     const team = content.find('h1 .red').text();
@@ -155,7 +192,7 @@ const parser = response => {
     const weightMatch = info.text().match(/Weight: ([\d]+) kg/i);
     const weight = weightMatch ? weightMatch[1].trim() : '-';
     const heightMatch = info.text().match(/Height: ([\d\.]+) m/i);
-    const height = heightMatch ? heightMatch[1].trim() : '';
+    const height = heightMatch ? heightMatch[1].trim() : '-';
     const uciRank = info.find('.rdrStandings span').eq(1).text();
 
     const winsText = content.find('.key-stats li');
@@ -187,7 +224,8 @@ const parser = response => {
         uciRank,
         proWins,
         grandTourStarts,
-        monumentStarts
+        monumentStarts,
+        url
     };
 }
 
@@ -196,7 +234,7 @@ const requests = Promise.all(urls.map(url =>
             .then(res => res.text())
             .then(content => {
                 try {
-                    return parser(content) 
+                    return parser(content, url) 
                 } catch(err) {
                     console.log(err);
                     return {url, err}
