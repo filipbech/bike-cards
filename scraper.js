@@ -8,17 +8,14 @@ const urls = [
     'https://www.procyclingstats.com/rider.php?id=168160',
     'https://www.procyclingstats.com/rider/annemiek-van-vleuten',
     'https://www.procyclingstats.com/rider/amanda-spratt',
-    'https://www.procyclingstats.com/rider/anna-van-der-breggen',
     'https://www.procyclingstats.com/rider/julie-leth',
     'https://www.procyclingstats.com/rider.php?id=140856',
-    'https://www.procyclingstats.com/rider/kirsten-wild',
     'https://www.procyclingstats.com/rider/lorena-wiebes',
     'https://www.procyclingstats.com/rider/marta-bastianelli',
     'https://www.procyclingstats.com/rider/amy-pieters',
     'https://www.procyclingstats.com/rider/leah-kirchmann',
     'https://www.procyclingstats.com/rider/ellen-van-dijk',
     'https://www.procyclingstats.com/rider/chloe-dygert',
-    'https://www.procyclingstats.com/rider/idar-andersen',
     'https://www.procyclingstats.com/rider/morten-hulgaard',
     'https://www.procyclingstats.com/rider/jasper-philipsen',
     'https://www.procyclingstats.com/rider/benoit-cosnefroy',
@@ -33,9 +30,9 @@ const urls = [
     'https://www.procyclingstats.com/rider/maciej-bodnar',
     'https://www.procyclingstats.com/rider/alessandro-de-marchi',
     'https://www.procyclingstats.com/rider/ben-swift',
+    'https://www.procyclingstats.com/rider/ben-o-connor',
     'https://www.procyclingstats.com/rider/jonathan-castroviejo',
     'https://www.procyclingstats.com/rider/dario-cataldo',
-    'https://www.procyclingstats.com/rider/sergio-luis-henao',
     'https://www.procyclingstats.com/rider/sebastian-henao',
     'https://www.procyclingstats.com/rider/caleb-ewan',
     'https://www.procyclingstats.com/rider/mike-teunissen',
@@ -63,7 +60,6 @@ const urls = [
     'https://www.procyclingstats.com/rider/johan-price-pejtersen',
     'https://www.procyclingstats.com/rider/david-de-la-cruz',
     'https://www.procyclingstats.com/rider/jesus-herrada-lopez',
-    'https://www.procyclingstats.com/rider/jose-herrada',
     'https://www.procyclingstats.com/rider/luka-mezgec',
     'https://www.procyclingstats.com/rider/josef-cerny',
     'https://www.procyclingstats.com/rider/bryan-coquard',
@@ -73,7 +69,7 @@ const urls = [
     'https://www.procyclingstats.com/rider/remco-evenepoel',
     'https://www.procyclingstats.com/rider/victor-campenaerts',
     'https://www.procyclingstats.com/rider/pello-bilbao',
-    'https://www.procyclingstats.com/rider/kenny-de-ketele',
+    'https://www.procyclingstats.com/rider/alex-aranburu',
     'https://www.procyclingstats.com/rider/mikkel-bjerg',
     'https://www.procyclingstats.com/rider/mathieu-van-der-poel',
     'https://www.procyclingstats.com/rider/wout-van-aert',
@@ -93,8 +89,6 @@ const urls = [
     'https://www.procyclingstats.com/rider/alexander-kamp',
     'https://www.procyclingstats.com/rider/martin-toft-madsen',
     'https://www.procyclingstats.com/rider/andreas-stokbro',
-    'https://www.procyclingstats.com/rider/emil-vinjebo',
-    'https://www.procyclingstats.com/rider/rasmus-quaade',
     'https://www.procyclingstats.com/rider/julius-johansen',
     'https://www.procyclingstats.com/rider/casper-pedersen',
     'https://www.procyclingstats.com/rider/mikkel-honore',
@@ -104,7 +98,7 @@ const urls = [
     'https://www.procyclingstats.com/rider/fabio-jakobsen',
     'https://www.procyclingstats.com/rider.php?id=140870',
     'https://www.procyclingstats.com/rider/michael-valgren-andersen',
-    'https://www.procyclingstats.com/rider/jesper-hansen-1',
+    'https://www.procyclingstats.com/rider/thomas-pidcock',
     'https://www.procyclingstats.com/rider/omar-fraile',
     'https://www.procyclingstats.com/rider/luis-leon-sanchez',
     'https://www.procyclingstats.com/rider.php?id=140495',
@@ -115,14 +109,12 @@ const urls = [
     'https://www.procyclingstats.com/rider/domenico-pozzovivo',
     'https://www.procyclingstats.com/rider/richie-porte',
     'https://www.procyclingstats.com/rider/greg-van-avermaet',
-    'https://www.procyclingstats.com/rider/tejay-van-garderen',
     'https://www.procyclingstats.com/rider/peter-sagan',
     'https://www.procyclingstats.com/rider/rafal-majka',
     'https://www.procyclingstats.com/rider/nacer-bouhanni',
     'https://www.procyclingstats.com/rider/lilian-calmejane',
     'https://www.procyclingstats.com/rider/thibaut-pinot',
     'https://www.procyclingstats.com/rider.php?id=140818',
-    'https://www.procyclingstats.com/rider.php?id=140786',
     'https://www.procyclingstats.com/rider/thomas-de-gendt',
     'https://www.procyclingstats.com/rider.php?id=133024',
     'https://www.procyclingstats.com/rider/simon-yates',
@@ -137,6 +129,7 @@ const urls = [
     'https://www.procyclingstats.com/rider/philippe-gilbert',
     'https://www.procyclingstats.com/rider/michael-morkov',
     'https://www.procyclingstats.com/rider/louis-meintjes',
+    'https://www.procyclingstats.com/rider/jonas-rutsch',
     'https://www.procyclingstats.com/rider/mark-cavendish',
     'https://www.procyclingstats.com/rider/edvald-boasson-hagen',
     'https://www.procyclingstats.com/rider/rigoberto-uran',
@@ -145,8 +138,8 @@ const urls = [
     'https://www.procyclingstats.com/rider/jonas-gregaard',
     'https://www.procyclingstats.com/rider/sep-vanmarcke',
     'https://www.procyclingstats.com/rider/warren-barguil',
-    'https://www.procyclingstats.com/rider/ilnur-zakarin',
-    'https://www.procyclingstats.com/rider/tony-martin',
+    'https://www.procyclingstats.com/rider/neilson-powless',
+    'https://www.procyclingstats.com/rider/brent-van-moer',
     'https://www.procyclingstats.com/rider/mads-wurtz-schmidt',
     'https://www.procyclingstats.com/rider/dylan-groenewegen',
     'https://www.procyclingstats.com/rider/steven-kruijswijk',
@@ -162,8 +155,6 @@ const urls = [
     'https://www.procyclingstats.com/rider/john-degenkolb',
     'https://www.procyclingstats.com/rider/mads-pedersen',
     'https://www.procyclingstats.com/rider/alexander-kristoff',
-    'https://www.procyclingstats.com/rider/dan-martin',
-    'https://www.procyclingstats.com/rider/fabio-aru',
     'https://www.procyclingstats.com/rider/guillaume-martin',
     'https://www.procyclingstats.com/rider/lasse-norman-hansen',
     'https://www.procyclingstats.com/rider/enric-mas',
@@ -211,6 +202,7 @@ const urls = [
     'https://www.procyclingstats.com/rider/frederik-wandahl',
     'https://www.procyclingstats.com/rider/emil-vinjebo',
     'https://www.procyclingstats.com/rider/jakob-egholm',
+    'https://www.procyclingstats.com/rider/mattia-cattaneo',
     'https://www.procyclingstats.com/rider/mattias-skjelmose-jensen',
     'https://www.procyclingstats.com/rider/florian-senechal',
     'https://www.procyclingstats.com/rider/giacomo-nizzolo',
@@ -227,8 +219,25 @@ const urls = [
     'https://www.procyclingstats.com/rider/anthony-turgis',
     'https://www.procyclingstats.com/rider/dries-devenyns',
     'https://www.procyclingstats.com/rider/davide-ballerini',
+    'https://www.procyclingstats.com/rider/ide-schelling',
+    'https://www.procyclingstats.com/rider/franck-bonnamour',
     'https://www.procyclingstats.com/rider/tanel-kangert',
-    'https://www.procyclingstats.com/rider/rudy-molard'
+    'https://www.procyclingstats.com/rider/rudy-molard',
+    'https://www.procyclingstats.com/rider/anthony-roux',
+    'https://www.procyclingstats.com/rider/gino-mader',
+    'https://www.procyclingstats.com/rider/mark-padun',
+    'https://www.procyclingstats.com/rider/rasmus-tiller',
+    'https://www.procyclingstats.com/rider/ethan-hayter',
+    'https://www.procyclingstats.com/rider/ben-hermans',
+    'https://www.procyclingstats.com/rider/dorian-godon',
+    'https://www.procyclingstats.com/rider/biniam-girmay',
+    'https://www.procyclingstats.com/rider/connor-swift',
+    'https://www.procyclingstats.com/rider/tosh-van-der-sande',
+    'https://www.procyclingstats.com/rider/hugo-hofstetter',
+    'https://www.procyclingstats.com/rider/jordi-meeus',
+    'https://www.procyclingstats.com/rider/lorenzo-rota',
+    'https://www.procyclingstats.com/rider/aurelien-paret-peintre',
+    'https://www.procyclingstats.com/rider/bram-welten'
 ]; //.filter((a,b) => b<1);
 
 
@@ -243,7 +252,7 @@ function camelize(str) {
 const parser = (response, url) => {
     const content = jQuery(response);
 
-    const team = content.find('h1 .red').text();
+    const team = content.find('h1').next().next().text().trim();
     const name = content.find('h1').text().replace(team, '').replace('»', '').trim();
     const image = 'https://www.procyclingstats.com/' + content.find('.content h3').first().next().find('a img').first().attr('src');
     const info = content.find('.rdr-info-cont');
@@ -255,20 +264,20 @@ const parser = (response, url) => {
     const weight = weightMatch ? weightMatch[1].trim() : '-';
     const heightMatch = info.text().match(/Height: ([\d\.]+) m/i);
     const height = heightMatch ? heightMatch[1].trim() : '-';
-    const uciRank = info.find('.rdrStandings span').eq(0).text();
+    const uciRank = content.find('.rdr-rankings li').eq(1).find('.rnk').text();
 
-    const winsText = content.find('.key-stats li');
 
-    const proWins = winsText.eq(2).find('div').first().text().trim();
-    const grandTourStarts = winsText.eq(0).find('div').first().text().trim();
-    const monumentStarts = winsText.eq(1).find('div').first().text().trim();
+
+    const proWins = content.find('.rider-kpi li').first().find('.nr').text().trim();
+    const grandTourStarts = content.find('.rider-kpi li').eq(1).find('.nr').text().trim();
+    const monumentStarts = content.find('.rider-kpi li').eq(2).find('.nr').text().trim();
 
     const specialities = {};
 
     info.find('.pps li').toArray().map(row => {
         return {
-            score: jQuery(row).find('span').eq(1).text(),
-            label: jQuery(row).find('span').eq(2).text(),
+            score: jQuery(row).find('.pnt').text(),
+            label: jQuery(row).find('.title').text(),
         };
     }).forEach(item => {
         specialities[camelize(item.label)] = item.score
